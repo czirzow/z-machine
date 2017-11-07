@@ -4,7 +4,7 @@ metallic screeching sound. The elevator doors start to open, but stop halfway.
 As you pry the doors open, cobwebs and dust blur your vision for a few moments.
 
 As you gain your orientation, you catch in the corner of your eye that there is
-a shiny object ahead. As you walk closer to the shiny object, you make out that
+a shiny object ahead. You walk closer to the shiny object, you make out that
 it is an engraved sign that reads:
 
 > What you did yesterday can be improved today.
