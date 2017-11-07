@@ -1,0 +1,233 @@
+2000-08-01 23:39  curt
+
+	* php_frotz.c: No more friendly color names :(	Still don't know
+	what to do about MEDIUM and LIGHT Grey	colours.
+
+2000-08-01 23:19  curt
+
+	* php_frotz.c: Added 'bcolor' and 'fcolor' to frotz_get_var();
+	default colors to black on green
+
+2000-08-01 23:12  curt
+
+	* php_frotz.c: watch out for buffer overflow. and <pre></pre> to
+	frotz_output().
+
+2000-08-01 23:01  curt
+
+	* Z/fastmem.c: nil
+
+2000-08-01 23:01  curt
+
+	* ux_init.c: Disable undos
+
+2000-08-01 22:44  curt
+
+	* php_frotz.c, ux_init.c: fixed some color issues.
+
+2000-08-01 22:32  curt
+
+	* php_frotz.c: Check to see if we are able to read the story file.
+
+2000-08-01 22:32  curt
+
+	* php_frotz.c, ux_pic.c, ux_screen.c, ux_text.c: Use current color
+	not screen_Xcolor.
+
+2000-08-01 22:07  curt
+
+	* php_frotz.c: Fixed a bold/italic/reverse problem
+
+2000-08-01 21:47  curt
+
+	* save.c: more verbose about errors
+
+2000-08-01 21:47  curt
+
+	* php_frotz.c: Fixed a bug causing a crash.
+
+2000-07-27 11:28  curt
+
+	* php_frotz.c: stopped using strncat.
+
+2000-07-27 11:27  curt
+
+	* Z/frotz.h, Z/screen.c, ux_pic.c: FIxed a bug in the Z-machine
+	code.
+
+2000-07-25 19:36  curt
+
+	* TODO: Hmm.. what else is there!
+
+2000-07-25 19:35  curt
+
+	* BUGS: Ha. there
+
+2000-07-25 19:35  curt
+
+	* php_frotz.c: Made os_peek_colour bug. more obious in colors.
+
+2000-07-25 19:33  curt
+
+	* Z/screen.c: Ooops. Bad bit shift.
+
+2000-07-25 19:32  curt
+
+	* Z/frotz.h: hmm.
+
+2000-07-25 19:32  curt
+
+	* ux_text.c: Added cursor picture support. Still debugging the
+	os_peek colour
+
+2000-07-25 19:31  curt
+
+	* ux_screen.c: Fixed a "scoll passed screen" bug
+
+2000-07-25 19:30  curt
+
+	* php_frotz.c, php_frotz.h, ux_pic.c: Added picture support
+
+2000-07-25 19:28  curt
+
+	* README: Added a readme file
+
+2000-07-22 20:27  curt
+
+	* php_frotz.c: Added more hashing security
+
+2000-07-22 20:02  curt
+
+	* php_frotz.c, php_frotz.h, ux_sample.c: Added beeps to signify
+	bell rings
+
+2000-07-22 16:43  curt
+
+	* php_frotz.c, php_frotz.h, save.c, ux_init.c, ux_input.c,
+	ux_sample.c, ux_screen.c, ux_text.c: Added ability to modify interp
+	number within php.
+
+2000-07-22 16:43  curt
+
+	* ux_frotz.h: Removed this file and put it all in php_frotz.h
+
+2000-07-22 15:22  curt
+
+	* php_frotz.c: Oops we need to clear the character after printing
+	it.
+
+2000-07-22 15:19  curt
+
+	* php_frotz.c, php_frotz.h, ux_frotz.h, ux_text.c: Added a cursor
+	blink.
+
+2000-07-22 15:03  curt
+
+	* BUGS, php_frotz.c: Added chunk_split so save game isn't one line
+	long
+
+2000-07-22 14:45  curt
+
+	* BUGS, php_frotz.c, php_frotz.h, save.c, ux_init.c, ux_input.c,
+	ux_screen.c, ux_text.c: Added cursor Movement keys and reverse,
+	bold, emphasise support.
+
+2000-07-21 19:54  curt
+
+	* BUGS, php_frotz.c: cursor display.
+
+2000-07-21 19:48  curt
+
+	* php_frotz.c: Changed some color names
+
+2000-07-21 19:48  curt
+
+	* BUGS: Bugs and todos added and removed
+
+2000-07-21 19:10  curt
+
+	* BUGS, CHANGES, php_frotz.c, php_frotz.h, save.c, ux_frotz.h,
+	ux_init.c, ux_input.c, ux_screen.c, ux_text.c, Z/screen.c,
+	Z/stream.c: See CHANGES
+
+2000-07-20 18:18  curt
+
+	* ux_init.c: Only say we support colors if color was set up and
+	game supports color.
+
+2000-07-20 17:50  curt
+
+	* BUGS, CHANGES, php_frotz.c, php_frotz.h, save.c, ux_init.c,
+	ux_screen.c, ux_text.c, Z/frotz.h, Z/screen.c: See CHANGES for info
+
+2000-07-18 22:28  curt
+
+	* BUGS, php_frotz.c: Make dave walton happy
+
+2000-07-17 22:07  curt
+
+	* BUGS: Bugs, thanks dave.
+
+2000-07-17 22:07  curt
+
+	* ux_text.c: Fixed more prompt bug
+
+2000-07-17 20:26  curt
+
+	* BUGS, CHANGES, Makefile.in, TODO, php_frotz.c, php_frotz.h,
+	save.c, ux_frotz.h, ux_init.c, ux_input.c, ux_pic.c, ux_sample.c,
+	ux_screen.c, ux_text.c, Z/fastmem.c, Z/screen.c: See CHANGES for
+	v0_6_4a
+
+2000-07-14 18:56  curt
+
+	* ux_input.c: Add text entered from user to the screen
+
+2000-07-14 18:51  curt
+
+	* php_frotz.c: frotz_play() now returns   9998 if the user quit.   
+	< 0 if an error occured.    Undefined if wrong paramater count	  0
+	if all is ok.
+
+2000-07-14 18:39  curt
+
+	* Z/: frotz.h, process.c: Added a way to access the finished
+	variable outside of frotz.
+
+2000-07-14 00:30  curt
+
+	* php_frotz.c: Seperated debugging info into PHP_DEBUG code
+
+2000-07-13 23:38  curt
+
+	* Z/: frotz.h, screen.c: Made some functions visible to the frotz
+	stuff.
+
+2000-07-13 23:37  curt
+
+	* php_frotz.c, php_frotz.h, save_restore.c, ux_frotz.h, ux_init.c,
+	ux_screen.c, ux_text.c: Wooh. this should be it for the major
+	updates. Second workable release.
+
+2000-07-10 12:54  curt
+
+	* libfrotz.la: Shouldn't be here
+
+2000-07-10 12:50  curt
+
+	* Z/php_frotz.c: Hey how'd that get here
+
+2000-07-09 15:05  curt
+
+	* Makefile.in, config.m4, libfrotz.la, libs.mk, php_frotz.c,
+	php_frotz.h, save_restore.c, ux_frotz.h, ux_init.c, ux_input.c,
+	ux_pic.c, ux_sample.c, ux_screen.c, ux_text.c, Z/Makefile.in,
+	Z/buffer.c, Z/fastmem.c, Z/files.c, Z/frotz.h, Z/hotkey.c,
+	Z/input.c, Z/main.c, Z/math.c, Z/object.c, Z/php_frotz.c,
+	Z/process.c, Z/random.c, Z/redirect.c, Z/screen.c, Z/sound.c,
+	Z/stream.c, Z/table.c, Z/text.c, Z/variable.c: Added files
+
+2000-07-09 15:03  curt
+
+	* .cvsignore: Ignore files.
+

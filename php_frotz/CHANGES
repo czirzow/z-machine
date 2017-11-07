@@ -1,0 +1,85 @@
+
+changes in v0.7.0
+  - Added secret and hash checking.
+  - Color support
+  - Fixed bug in displaying inputed text. 
+  - Removed frotz_print_raw now use frotz_output($type)
+  - LATIN1 properly implemented.
+
+
+
+
+changes in v0.6.4b
+  - BUGS fixed:
+      gntest: option 1 -menu overwrites output (fixed) this will
+	          this will fix other problems with windowing.
+     Trinity: error 500 on 2nd screen (fixed) this should fix a
+	          majority of other 500 errors.
+	  
+  - Internals of save game changed
+  - Removed the Config option for TIMEDINPUT capabilities
+  - Changed Interpreter to AMIGA type system.
+  - If Game tries to scroll part of a screen that goes beyond
+    my limits I die.  ZORK0  does this.
+  - We now display the LATIN1 characters
+
+
+changes in v0.6.4a
+  - Added the ability to set row and col sizes within php
+  - Removed the frotz_init() php function
+  - Removed the  frotz_restore() php function
+  - Frotz now is more efficiant with memory (and cpu) when 
+    a more prompt is expected.
+  - Removed the  frotz_save_game() php function
+  - Added php function frotz_set_var()
+  - Fixed a bug when displaying results from the 
+    frotz_print_html_raw() function
+  - Removed the frotz_print_html_pre() completely
+  - Cleaned up the ux_* old code a bit.
+  - More options in frotz_get_var() and frotz_set_var();
+    (See source of ifiction test)
+
+
+
+
+
+fixes from v0.6.3 to v0.6.4
+
+  - removed some compile warnings 
+  - Added zlib support (compiled with --with-zlib)
+    (generally adds 50% compression or more to save file.)
+
+  - More prompts work.
+  - changed frotz_print_html_pre to frotz_print_html_raw
+
+  
+fixes v0.6.1 to v0.6.3
+  - don't ask
+
+fixes from v0.6 to v0.6.1
+  - frotz now only uses the first character of the string
+    if we are expecting a READ_KEY 
+  - Fatal error: frotz_print_char_at: is out of bounds, 20320, 4096 in ...
+    Should now be fixed.
+  - Added phpinfo information. so version info can be known.
+  - frotz_play returns TRUE or FALSE.
+
+
+fixes from v0.5 to v0.6
+  - z-engine buffer is flushed before a save.
+  - fixed the problem on initial start up and having no keys in 
+    the buffer (but introduced a problem with accessing parts outside
+    the game ie. INFO in softporn and help in Adventure).
+  - Fixed the problem introduced above.
+  - Added the ability to know what kind of read is expected on next
+    page. (Again introduced a window bug see KNOWN BUGS (window bug))
+  - Removed line numbers. 
+
+
+
+
+
+
+
+
+  

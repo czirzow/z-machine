@@ -1,0 +1,6 @@
+TODO
+------
+input pre-loading - peek ahead to see what is put in buffer, then move cursor
+      back that many chars before echoing. frotz_get_var('input')?
+
+true image support

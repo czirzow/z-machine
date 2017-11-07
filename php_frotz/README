@@ -1,0 +1,121 @@
+# Notes 
+This is a php module to create php funtions listed in the table of contents.
+The frotz library is needed to properly compile.
+
+Frotz functions:
+
+Table of contents
+    frotz_set_var
+    frotz_get_var
+    frotz_output
+    frotz_close
+
+
+frotz_set_var
+
+  int frotz_set_var (string varname, any value);
+
+Sets environment for certain aspects of the z-machine. varname
+can be one of the values and type that is expected:
+
+    story_file    pass a string that contains the location of the story file
+                this is required to be called first. 
+
+    graphics    a string that contains the location of a graphics file. Only
+                use this for a game that expects a file.
+
+    save_game    pass a string received from a save_game get_var that 
+                will restore a played game.
+
+    secret        A string that is a secret code for checking the hash to
+                make sure it is valid. 
+
+    interp_num  Only if it was compiled in. Lets you specify the type
+                of interpret you want to be known as value passed
+                must be one of the following constants:
+                    INTERP_DEC_20 1
+                    INTERP_APPLE_IIE 2
+                    INTERP_MACINTOSH 3
+                    INTERP_AMIGA 4
+                    INTERP_ATARI_ST 5
+                    INTERP_MSDOS 6
+                    INTERP_CBM_128 7
+                    INTERP_CBM_64 8
+                    INTERP_APPLE_IIC 9
+                    INTERP_APPLE_IIGS 10
+                    INTERP_TANDY 11
+
+   Once the following values have been set they will be known throughout
+   the game. So only if a new game is being played should these be set.
+    rows          a number for rows on a screen (recommend 24)
+    cols          a number for cols on a screen (recommend 80)
+    fcolor        a number representing default fore color
+    bcolor        a number representing default back color
+      Valid color constants/values are:
+        BLACK_COLOUR 2
+        RED_COLOUR 3
+        GREEN_COLOUR 4
+        YELLOW_COLOUR 5
+        BLUE_COLOUR 6
+        MAGENTA_COLOUR 7
+        CYAN_COLOUR 8
+        WHITE_COLOUR 9
+        GREY_COLOUR 10          (INTERP_MSDOS)
+        LIGHTGREY_COLOUR 10     (INTERP_AMIGA only 
+        MEDIUMGREY_COLOUR 11    (ditto)
+        DARKGREY_COLOUR 12      (ditto)
+
+
+frotz_get_var
+  any frotz_get_var (string varname);
+
+  retrieves values that may be needed after a game has been played
+  varnames can be one of the following:
+    read_state    returns a flag specifying if the games wants a 
+                string a single char on next execution.
+
+    save_game    returns sting to be used to resume game.
+                *NOTE*
+                Do not get this until you printed the screen out
+                (frotz_output) It will break if a 'more'
+                prompt is expected.
+
+    beeps        returns an int that specifies how many times the game
+                beeped.
+
+
+frotz_play
+  int frotz_play(string command)
+
+  Uses the string command to issue a set of commands to a game. A value
+  of 0 will be returned if another command can legally be played for the 
+  next round.
+
+  Note that no eol (\n) is needed to be appended to the command string. 
+  In fact it will cause  false key stokes be submitted to the game.
+
+  Depending on your configuration you may need to issue a strip slashes. 
+
+  Special keys can be passed to the game by escaping them with '\'. 
+
+    \d   represents a <key-down>
+    \u   represents a <key-up>
+    \l   represents a <key-left>
+    \r   represents a <key-right>
+
+
+frotz_output
+  void frotz_output(int type)
+
+  Print the results of a played game.
+  Type can be:
+  
+    FROTZ_PRINT_PRE  (default) prints out html inside a <pre> tag.
+    FROTZ_PRINT_DUMP will printout all possible data (more prompts). Used
+                     primarily for debugging.
+
+frotz_close
+  int frotz_close(void)
+
+  Must be called. Just keeps you outa trouble!
+
