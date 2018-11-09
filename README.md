@@ -11,7 +11,7 @@ Dazed and confused you start gaining orientation and see a shiny object that
 shimmers just beyond the cobwebs that hang in front of the elevator doors that
 are still not fully open.
 
-Taking a few steps fowrard  to the shiny object, you make out that
+Taking a few steps forward  to the shiny object, you make out that
 it is an silver engraved sign that reads:
 
 > What you did yesterday can be improved today.
